@@ -8,9 +8,9 @@ The Server's task is to get the data from the Client (using TCP that we implemen
 
 ## Instruction:
 This program is separated into two parts, The Server and the Client. You need two run them separately and simultaneously.
-1. Compile the code using the following command: `g++ -std=c++11 *.cpp`
-2. Run the Server, The server does not get any arguments.
-3. Run the Client. You need to send two arguments, The first is the address of the file that contains the Irises' data that need to be classified and the second is the address of the file that you want to output to be in.
+1. Compile the sever using the following command: `g++ -std=c++11 ClassificationServer.cpp ClassifierKnn.cpp Iris.cpp IrisAndDistance.cpp -o ./bin/Server.out`. Then run it with the commad: `./bin/Server.out`.
+2. Compile the client using the following command: `g++ -std=c++11 ClassificationClient.cpp -o ./bin/Client.out`.
+3. Run the Client with the command: `./bin/Client.out`. You need to send two arguments, The first is the address of the file that contains the Irises' data that need to be classified and the second is the address of the file that you want to output to be in.
 4. The output of the program will be in the given file (That was given in the arguments of the Client).
 5. After the Client disconnects from the Server, the Server waits for a new Client. In order to run a new Client on the same Server, You need to Run the Client (with the two arguments, like in step no. 3) again.
 - If an error occurs while working with the sockets, an error massage will be printed into the console.
